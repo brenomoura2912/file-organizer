@@ -48,6 +48,14 @@ if __name__ == "__main__":
     if resultado:
         with open(os.path.join(caminho_alvo, 'log_organizacao.json'), 'w') as f:
             json.dump(resultado, f, indent=4)
-        print(f"Sucesso! {len(resultado)} arquivos organizados.")
+        
+        print("\n" + "="*40)
+        print(f" SUCCESS: {len(resultado)} arquivos organizados com sucesso!")
+        print(f" Um relatório foi gerado em: log_organizacao.json")
+        print("="*40)
+    else:
+        print("\nNenhum arquivo compatível foi encontrado para organizar.")
 
+    print("\n")
+    input("Pressione ENTER para fechar o programa...")
             
